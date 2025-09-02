@@ -67,10 +67,8 @@ python snakegame2.py
 
 ## Screenshot
 
-![Snake Game Screenshot]
-(IMAGE1.jpg)
-
-(IMAGE2.jpg)
+![Snake Game Screenshot](IMAGE1.jpg)
+![Snake Game Screenshot](IMAGE2.jpg)
 
 
 ---

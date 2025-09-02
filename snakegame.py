@@ -15,17 +15,15 @@ bodies=[]
 s=turtle.Screen()
 s.title("Snake Game")
 s.bgcolor("light blue")
-
 s.setup(width=600,height=600) # Size of screen
 s.tracer(0)
-#s.addshape("snakehead.gif")
+
 
 #Creating a head
 
 head=turtle.Turtle()
 head.speed(0)
 head.shape("circle")
-#head.shape("snakehead.gif")
 head.color("blue")
 head.fillcolor("red")
 head.penup()
@@ -175,21 +173,8 @@ while True:
          
 
 
-# check collision with snake body--
-        '''for body in bodies:
-                if body.distance(head)<20:
-                        time.sleep(1)
-                        head.goto(0,0)
-                        head.direction="stop"
-                        #hide bodies
-                        for body in bodies:
-                                body.ht()
-                                body.clear()
-                        sc=0
-                        delay=0.1
-                        sb.clear()
-                        sb.write("Score:{}  | Highest Score:{}".format(sc,hs))'''
-        # Check collision with snake body
+
+# Check collision with snake body
         for body in bodies:
                 if body.distance(head) < 20:
                         reset_game()

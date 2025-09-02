@@ -6,7 +6,6 @@ delay=0.1
 sc=0
 hs=0
 
-
 #Creating a body for snake
 bodies=[]
 
@@ -41,7 +40,6 @@ head.ht()#hide turtle
 food.goto(150,250)
 head.st()#Show turTle
 
-
 # Creating a score board
 
 sb=turtle.Turtle()
@@ -49,7 +47,6 @@ sb.penup()
 sb.ht()
 sb.goto(-260,260)
 sb.write("Score:0 | Highest Score: 0")# Write anything
-
 
 # Creating function for moving in all direction
 
@@ -78,12 +75,9 @@ def move():
         if head.direction=="down":
                 y=head.ycor()
                 head.sety(y-20)
-
         if head.direction=="right":
                 x=head.xcor()
                 head.setx(x+20)
-
-
 
 # creating new function
 def reset_game():
@@ -117,17 +111,9 @@ s.onkey(moveRight,"Right")
 s.onkey(reset_game,"space")
 
 
-
-
-
-
-    
-
-
 #mainloop
 
-while True:
-        
+while True:       
         s.update() # to update the screen
         # check collision with border
         if head.xcor()>290:
@@ -151,10 +137,8 @@ while True:
                 body.shape("square")
                 body.color("red")
                 bodies.append(body)# append the new body in list
-
                 sc=sc+100  # increase the score
                 delay = delay-0.001  # increase the speed
-
                 if sc>hs:
                         hs=sc # update highest score
                 sb.clear()
@@ -171,15 +155,11 @@ while True:
                 bodies[0].goto(x,y)
         move()
          
-
-
-
 # Check collision with snake body
         for body in bodies:
                 if body.distance(head) < 20:
                         reset_game()
-        time.sleep(delay)
-        
+        time.sleep(delay)        
 s.mainloop()
                                 
         
